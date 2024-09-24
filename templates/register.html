@@ -3,18 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web App</title>
-    <link rel="stylesheet" href="static/css/styleRegister.css">
+    <title>Registro de Actividades</title>
+    <!-- Enlace a Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/styleRegister.css">
     <script src="static/js/appRegister.js"></script>
 </head>
 <body>
-    <form>
-        <h1> Registro</h1>
-        <label> Id </label> <input> <br> <br>
-        <label> Nombre </label> <input> <br> <br>
-        <label> Apellido </label> <input> <br> <br>
-        <label> Fecha de nacimiento </label> <input> <br> <br>
-        <button onclick="register_user()"> Registrate </button>
-    </form> 
+
+    <!-- Navbar anclada (sticky) -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <a class="navbar-brand" href="#">Actividades Laborales</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="register.html">Reistrate</a>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Registrar Actividad</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Consultar Actividades</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form class="bg-light p-4 rounded shadow">
+                    <h1 class="text-center mb-4">Registro</h1>
+                    
+                    <div class="form-group">
+                        <label for="id">ID</label>
+                        <input type="text" class="form-control" id="id" placeholder="Ingresa tu ID">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" class="form-control" id="apellido" placeholder="Ingresa tu apellido">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fecha_nacimiento">Fecha de Nacimiento</label>
+                        <input type="date" class="form-control" id="fecha_nacimiento">
+                    </div>
+
+                    <button type="button" class="btn btn-primary btn-block" onclick="register_user()">Registrarse</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enlace a Bootstrap JS y dependencias -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>
